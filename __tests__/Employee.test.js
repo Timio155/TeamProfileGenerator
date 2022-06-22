@@ -1,5 +1,14 @@
-const checkIfEqual = require('../lib/Employee.js');
+const Employee = require("../lib/Employee");
 
-test('checks if 10 is equal to 10', () => {
-  expect(checkIfEqual(10, 10)).toBe(true);
+describe("Employee", () => {
+  it("Can recognize as Employee", () => {
+    const e = new Employee();
+    expect(typeof (e)).toBe("object");
+  });
+
+  it("Can set name via constructor arguments", () => {
+    const name = "Leroy Jenkins";
+    const e = new Employee(name);
+    expect(e.name).toBe(name);
+  });
 });

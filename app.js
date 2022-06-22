@@ -97,7 +97,7 @@ function startHtml() {
     <body>
         <nav class="navbar nav
         bar-dark bg-dark mb-5">
-            <span class="navbar-brand mb-0 h1 w-100 text-center">Team Profile</span>
+            <span class="navbar-brand mb-0 h1 w-100 text-center text-light">Team Profile</span>
         </nav>
         <div class="container">
             <div class="row">`;
@@ -141,7 +141,7 @@ function addHtml(member) {
             </div>
         </div>`;
         } else {
-            const officePhone = member.getOfficeNumber();
+            const officePhone = member.getOfficePhone();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
             <h5 class="card-header">${name}<br /><br />Manager</h5>
@@ -161,9 +161,6 @@ function addHtml(member) {
             return resolve();
         });
     });
-
-
-
 
 
 
