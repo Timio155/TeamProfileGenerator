@@ -95,12 +95,13 @@ function startHtml() {
         <title>Team Profile</title>
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark mb-5">
+        <nav class="navbar nav
+        bar-dark bg-dark mb-5">
             <span class="navbar-brand mb-0 h1 w-100 text-center">Team Profile</span>
         </nav>
         <div class="container">
             <div class="row">`;
-    fs.writeFile("./output/team.html", html, function (err) {
+    fs.writeFile("./dist/index.html", html, function (err) {
         if (err) {
             console.log(err);
         }
@@ -153,7 +154,7 @@ function addHtml(member) {
         </div>`
         }
         console.log("adding team member");
-        fs.appendFile("./output/team.html", data, function (err) {
+        fs.appendFile("./dist/index.html", data, function (err) {
             if (err) {
                 return reject(err);
             };
@@ -175,18 +176,11 @@ function finishHtml() {
 </body>
 </html>`;
 
-    fs.appendFile("./output/team.html", html, function (err) {
+    fs.appendFile("./dist/index.html", html, function (err) {
         if (err) {
             console.log(err);
         };
     });
     console.log("end");
 }
-
-// addMember();
-// startHtml();
-// addHtml("hi")
-// .then(function() {
-// finishHtml();
-// });
 initApp();
